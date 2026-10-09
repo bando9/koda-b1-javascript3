@@ -1,36 +1,21 @@
-function callEd() {
+function callName(name, second) {
+  const convertToMilisecond = second * 1000;
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve("Ed");
-    }, 2000);
-  });
-}
-
-function callJane() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("Jane");
-    }, 500);
-  });
-}
-
-function callJohn() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("John");
-    }, 1500);
+      resolve(name);
+    }, convertToMilisecond);
   });
 }
 
 async function printName() {
   try {
-    const johnCalled = await callJohn();
+    const johnCalled = await callName("John", 1.5);
     console.log(johnCalled);
 
-    const edCalled = await callEd();
+    const edCalled = await callName("Ed", 2);
     console.log(edCalled);
 
-    const janeCalled = await callJane();
+    const janeCalled = await callName("Jane", 0.5);
     console.log(janeCalled);
   } catch (err) {
     console.log("Error: " + err);
