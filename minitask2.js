@@ -24,6 +24,30 @@ const convertToNumber = Number(numb);
 console.log("sebelum convert tipe data: " + typeof numb);
 console.log("setelah convert tipe data: " + typeof convertToNumber);
 
+// * Boolean
+/**
+ * digunakan untuk mengubah tipe data menjadi boolean.
+ * aturan: NaN, undefined, and null menghasilkan false
+ */
+
+console.log(Boolean(3));
+
+// * String
+/**
+ * digunakan untuk mengubah value menjadi sebuah string
+ */
+const convertString = String(9381424);
+console.log(convertString);
+console.log(typeof convertString);
+
+// * isFinite
+/**
+ * digunakan untuk mengecek apakah nilai menghasilkan angka yang tak terhingga. misal pada perhitungan 0 / 0
+ * menghasilkan nilai false dan true
+ */
+
+console.log(isFinite(0 / 0));
+
 // * ===BUILT-IN METHOD===
 
 const persons = [
